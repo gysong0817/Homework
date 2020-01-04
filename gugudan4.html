@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단</title>
+</head>
+<body>
+    <h1>객체를 활용한 구구단</h1>
+    <script>
+        gugu = {};
+        gugu.result = [];
+        gugu.dan = 2;
+        gugu.setDan = function(n) {
+            this.dan = n;
+            for (var i = 0; i < 9; i++) {
+                this.result[i] = this.dan * (i + 1);
+            }
+        }
+
+        gugu.print = function () {
+            document.write("<h2>" + this.dan + "단</h2>");
+            for (var i = 0; i < 9; i++) {
+                document.write(this.dan + " X " + (i + 1) + " = " + this.result[i] + "<br>");
+            }
+        }
+
+        gugu.doAll = function() {
+            for (var i = 2; i <= 9; i++) {
+                this.setDan(i);
+                this.print();
+            }
+        }
+        
+        gugu.doAll();
+        //console.log(calculate.build9());
+
+        //var r = build9(2);
+        //print9(2, r);
+
+    </script>
+</body>
+</html>
