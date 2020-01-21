@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>객체2</title>
+</head>
+<body>
+    <script>
+        // Food(name, energy) 생성자를 만들어 봅시다.
+        // eat(food) 메소드를 Human() 생성자 안에 추가해 봅시다.
+        // 도너츠 객체를 생성해서 휴먼 객체에서 먹여 봅시다.
+
+        var Human = function(name, energy) {
+            this.name = name;
+            this.energy = energy;
+            this.eat = function(food) {
+                this.food = Food.name;
+                console.log(this.name + "이(가)" + food + "을(를) 먹어 " + Food.energy + "만큼 회복했습니다.");
+            }
+        }
+
+        var Food = function(name, energy) {
+            this.name = name;
+            this.energy = energy;
+        }
+    </script>
+</body>
+</html>
